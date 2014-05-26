@@ -1,0 +1,19 @@
+ChemFoParser
+Getting the Latest Chemistry Research News!
+
+
+For complete replication of results, the following things 
+need to be installed
+
+List of Resources Used:
+Linux Distribution
+	Bodhi Linux
+
+Python 2.7
+	Modules Used
+		Feedparser
+		MySQLdb
+SQL
+	MySQL
+Dbeaver (GUI For SQL)
+
