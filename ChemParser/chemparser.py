@@ -29,10 +29,10 @@ d = insertFeed(websiteLists[input])
 SQL STUFF
 '''
 print "\nuser, and password"
-#x=raw_input()
+
 y=raw_input()
 z=raw_input()
-#db1 = MySQLdb.connect(host="localhost",user= ,passwd="")
+
 db1 = MySQLdb.connect(host = 'localhost',user = y,passwd = z)
 cursor = db1.cursor()
 
@@ -40,10 +40,7 @@ cursor.execute('use test')
 cursor.execute('DROP TABLE IF EXISTS `feed4dayz`;')
 cursor.execute('CREATE TABLE `feed4dayz` (Author varchar(255),Title varchar(5000), Published varchar(25), FULLTEXT (Author,Title)) ENGINE=MyISAM;')
 
-'''
-for i in range(len(d.entries)):
-	print d.entries[i].title
-'''
+
 titles = returnListofTitles(d.entries)
 authors = returnListofAuthors(d.entries)
 pubDate = returnListofPubDate(d.entries)
@@ -98,8 +95,3 @@ db1.commit()
 #printALLPosts(d);
 
 
-'''FINAL NOTE TO ME 
-You might have to aggregate the results then put all of 
-results with the title and author and published 
-in a list using a for loop
-''' 
